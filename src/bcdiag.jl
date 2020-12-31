@@ -111,7 +111,7 @@ function bcdiag(target::BitArray{1}, pred::Vector; groups = 100, rev = true, tie
 end
 
 function bcdiag(target::Vector, pred::Vector; groups = 100, rev = true, tie = 1e-6)
-    uc = unique(target)
+    uc = sort(unique(target))
     length(uc) == 2 || error(ArgumentError("target should have 2 levels"))
 
     bcdiag(target .== uc[2], pred; rev = rev)
