@@ -14,10 +14,10 @@ makedocs(;
     pages = Any[
         "Home" => "index.md",
         "Manual" => Any[
+            "Binary Classifier" => "man/bcdiag.md",
             "Data preparation" => "man/dataprep.md",
             "Binning methods" => "man/binning.md",
             "Categorical encoding" => "man/categorical.md",
-            "Binary Classifier" => "man/bcdiag.md",
         ],
         "Function Reference" => "Reference.md",
     ],

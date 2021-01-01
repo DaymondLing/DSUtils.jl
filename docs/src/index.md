@@ -1,18 +1,5 @@
 # DSUtils.jl
 
-A set of Data Science utilities in Julia for industry practitioners.
-
-## Installation
-
-This package is not registered in Julia's general registry.
-You can add it via its URL:
-
-```
-] add https://github.com/DaymondLing/DSUtils.jl
-```
-
-## Purpose
-
 The intent of DSUtils is to make it easy for industry practitioners to
 get their work done.
 It provides functions for some routine parts of data science workflow
@@ -23,18 +10,27 @@ on millions of rows of data.
 
 There are no new capabilities per se, indeed, many of the functionalities
 are available in other packages.
-It is an end user package to get analysis done rather than
+It is an end user package for people to get their analysis done rather than
 a package for others to build packages with.
+
+## Installation
+
+This package is not registered in Julia's general registry.
+You can add it via its URL:
+
+```
+] add https://github.com/DaymondLing/DSUtils.jl
+```
 
 ## Current capabilities
 
 - Binary classifier performance evaluation
-    - `kstest`, 2 sample Kolmogorov-Smirnov point estimate and location
-    - `auroc`, Area Under Receiver Operatin Characteristics curve via
+    - `kstest`, 2 sample Kolmogorov-Smirnov separation point estimate and location
+    - `auroc`, Area Under Receiver Operating Characteristics curve via
         concordance calculation rather than numeric integration
     - `bcdiag`, wrapper for `kstest` and `auroc` that facilitates
-        plotting the graphs below
-    - `ksplot`, plot of Kolmogorov-Smirnov separation
+        plotting the graphs and generating tables below
+    - `ksplot`, plot of Kolmogorov-Smirnov 2 sample CDF separation
     - `rocplot`, ROC plot
     - `biasplot`, plot of actual response rate vs. predicted probability
     - `accuracyplot`, plot of accuracy given utility values for [TP, FN, FP, TN]
@@ -57,5 +53,6 @@ a package for others to build packages with.
 
 ## Project Status
 
-This is work in progress, development is against the more recent versions
-of Julia, e.g., 1.4 and up.
+This is work in progress, development is done on Julia 1.5 although there's
+nothing special about the code that would prevent it from working on older
+versions of Julia.
