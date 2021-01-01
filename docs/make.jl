@@ -24,6 +24,6 @@ makedocs(;
 )
 
 deploydocs(;
-   repo="github.com/DaymondLing/DSUtils.jl",
-   devbranch = "main"
+   repo="github.com/DaymondLing/DSUtils.jl.git",
+   devbranch = "main",
 )
