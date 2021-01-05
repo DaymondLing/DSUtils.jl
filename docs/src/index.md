@@ -15,7 +15,7 @@ a package for others to build packages with.
 
 ## Installation
 
-This package is not registered in Julia's general registry.
+This package is not registered in Julia's general registry yet.
 You can add it via its URL:
 
 ```

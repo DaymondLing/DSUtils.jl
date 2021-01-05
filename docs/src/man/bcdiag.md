@@ -24,8 +24,8 @@ Let's generate some data to illustrate the idea.
 
 ```@example kstest
 using Random, Distributions, Plots
-
 Random.seed!(123)
+ENV["GKSwstype"] = "nul"             # running headless
 
 n100 = rand(Normal(100, 10), 1000)
 n100a = rand(Normal(100, 10), 1000)
@@ -134,8 +134,7 @@ Then we can compute:
 
 - AUC: (Concordant + 0.5 Tied) / (N1 * N0)
 - Gini: 2AUC - 1, or (Concordant - Discordant) / (N1 * N0)
-- Goodman-Kruskal Gamma: (Concordant - Discordant) / (Concordant + Discordant),
-no penalty for Tied
+- Goodman-Kruskal Gamma: (Concordant - Discordant) / (Concordant + Discordant), no penalty for Tied
 - Kendall's Tau: (Concordant - Discordant) / (0.5 * (N1+N0) * (N1+N0-1))
 
 We can interpret AUC as the percentage of time class 1 probabilities is larger
