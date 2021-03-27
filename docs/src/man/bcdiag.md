@@ -2,16 +2,16 @@
 
 Whether you are building a binary classifier or need to audit one built
 by someone else, there are many things we'd like to know about its performance.
-The following sections describe functions that are designed to let you easily get at
-commonly used binary classifier performance diagnostic metrics.
+The following sections describe functions that are designed to let you easily
+get at commonly used binary classifier performance diagnostic metrics.
 
-The functions are relatively performant and are capable of handling millions of rows
-of data.
+The functions are relatively performant and are capable of handling
+millions of rows of data.
 
 ## kstest
 
-The two sample Kolmogorov-Smirnov test is a statistical test of whether two empirical
-distributions are the same.
+The two sample Kolmogorov-Smirnov test is a statistical test of whether
+two empirical distributions are the same.
 The test is based on finding the maximum separation between the two cumulative
 distribution functions (CDF) and determining the p-value of the test statistic.
 
@@ -23,9 +23,10 @@ where does it occur.
 Let's generate some data to illustrate the idea.
 
 ```@example kstest
-using Random, Distributions, Plots
+using Plots
+ENV["GKSwstype"] = "nul"            # running headless turn off GR plot display
+using Random, Distributions
 Random.seed!(123)
-ENV["GKSwstype"] = "nul"             # running headless
 
 n100 = rand(Normal(100, 10), 1000)
 n100a = rand(Normal(100, 10), 1000)
