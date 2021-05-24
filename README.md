@@ -9,7 +9,7 @@ A set of Data Science utilities in Julia for industry practitioners.
 
 ## Installation
 
-This package is not yet registered in Julia's general registry.
+This package is not registered in Julia's general registry.
 You can add it via its URL:
 
 ```

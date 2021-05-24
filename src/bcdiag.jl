@@ -207,7 +207,7 @@ function accuracyplot(x::BCDiag; util = [1, 0, 0, 1])
     up = dot([p, 0., 0., q], util)                  # TP, FN, FP, TN of perfect classifier
 
     # 0.5 / 0.5 random classifier
-    ur5 = dot([0.5p, 0.5p, 0.5q, 0.5q], util)
+    # ur5 = dot([0.5p, 0.5p, 0.5q, 0.5q], util)
 
     # baserate random classifier
     urb = dot([p*p, p*q, p*q, q*q], util)
@@ -288,6 +288,8 @@ function liftable(x::BCDiag)
                     rrObs = x.rrObs, rrPred = x.rrPrd,
                     liftObs = x.rrObs ./ x.baserate, liftPrd = x.rrPrd ./ x.baserate
                     )
+
+    out
 end
 
 
